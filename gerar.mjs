@@ -305,7 +305,8 @@ async function gerarPdfs(pastaSaida, cv, versoes) {
     console.warn('   Rode "npm install" e "npx playwright install chromium", ou use --sem-pdf.');
     return false;
   }
-  const navegador = await pw.chromium.launch();
+  // NAVEGADOR: caminho de um Chrome/Chromium já instalado (opcional)
+  const navegador = await pw.chromium.launch(process.env.NAVEGADOR ? { executablePath: process.env.NAVEGADOR } : {});
   const pagina = await navegador.newPage();
   await pagina.emulateMedia({ media: 'print', colorScheme: 'light' });
   const rodape = `

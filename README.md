@@ -35,6 +35,7 @@ Outros comandos:
 | `node gerar.mjs outro.json --saida pasta` | usa outro arquivo e outra pasta |
 | `node gerar.mjs --versao docencia` | gera só uma versão |
 | `npm test` | roda os testes |
+| `NAVEGADOR=/caminho/do/chrome npm run gerar` | usa um Chrome já instalado no PDF, sem `npx playwright install` |
 
 ## O formato do JSON
 

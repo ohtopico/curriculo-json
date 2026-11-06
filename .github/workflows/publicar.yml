@@ -25,9 +25,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
       - run: npm test
+      # Usa o Google Chrome que já vem no runner do GitHub (mais rápido que baixar)
       - run: node gerar.mjs curriculo.json --saida saida
+        env:
+          NAVEGADOR: /usr/bin/google-chrome
       - uses: actions/upload-pages-artifact@v3
         with:
           path: saida

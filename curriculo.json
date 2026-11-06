@@ -1,0 +1,296 @@
+{
+  "$schema": "./schema/curriculo.schema.json",
+  "idioma": "pt-BR",
+  "versoes": {
+    "completo": "Completo",
+    "docencia": "Docência",
+    "dados": "Dados e IA"
+  },
+  "pessoa": {
+    "nome": "Júlia Roberta Quoos Alves",
+    "titulo": "Professora de computação · Formadora de professores em IA · Pesquisadora em visão computacional",
+    "subtitulo": "Mestranda em Ciência da Computação (UFSM) · Bacharel em Ciência da Computação (UNISC) · Licenciada em Informática",
+    "contatos": [
+      {
+        "rotulo": "E-mail",
+        "texto": "contato@ohtopico.com.br",
+        "link": "mailto:contato@ohtopico.com.br"
+      },
+      {
+        "rotulo": "Site",
+        "texto": "ohtopico.com.br",
+        "link": "https://ohtopico.com.br"
+      },
+      {
+        "rotulo": "GitHub",
+        "texto": "ohtopico",
+        "link": "https://github.com/ohtopico"
+      },
+      {
+        "rotulo": "LinkedIn",
+        "texto": "in/ohtopico",
+        "link": "https://www.linkedin.com/in/ohtopico"
+      },
+      {
+        "rotulo": "ORCID",
+        "texto": "0000-0002-9948-779X",
+        "link": "https://orcid.org/0000-0002-9948-779X"
+      },
+      {
+        "rotulo": "Lattes",
+        "texto": "7211035377768669",
+        "link": "https://lattes.cnpq.br/7211035377768669"
+      },
+      {
+        "rotulo": "Local",
+        "texto": "Rio Grande do Sul · presencial, híbrido ou remoto"
+      },
+      {
+        "rotulo": "Idiomas",
+        "texto": "português, inglês e espanhol (profissional)"
+      }
+    ]
+  },
+  "resumo": {
+    "completo": "Professora de computação, formadora de professores em IA e pesquisadora em visão computacional no Rio Grande do Sul. Une ==a base técnica== (engenharia de dados, iniciação científica em IA pelo CNPq de 2020 a 2025 e mestrado na UFSM) ==à sala de aula==: forma professores da rede municipal, é autora do guia **IA pra Prof** e mantém um acervo aberto com 42 aulas da BNCC Computação, 20 jogos e 7 simuladores.",
+    "docencia": "Professora de computação e formadora de professores em IA, licenciada em Informática e mestranda na UFSM. Leciona para o ensino médio da rede estadual e ==forma professores da rede municipal== no uso de tecnologia e IA em sala de aula. É autora do guia **IA pra Prof** (com ISBN) e de um acervo aberto alinhado à BNCC, com 42 aulas com planos de aula, 20 jogos e 7 simuladores.",
+    "dados": "Engenheira de dados e de machine learning, com Python, SQL e PySpark, experiência em nuvem (AWS e Google Cloud) e ==visão computacional==. Mestranda na UFSM, onde compara arquiteturas MobileNet para hardware embarcado. Publica projetos de ponta a ponta no GitHub: da coleta e limpeza dos dados ao modelo e ao painel interativo."
+  },
+  "secoes": [
+    {
+      "titulo": "Experiência",
+      "itens": [
+        {
+          "titulo": "Formadora de professores",
+          "local": "Programa A União Faz a Vida",
+          "periodo": "2026 – atual",
+          "versoes": [
+            "completo",
+            "docencia"
+          ],
+          "topicos": [
+            "Planeja e ministra oficinas de formação continuada para professores de matemática da rede municipal sobre tecnologia e IA em sala de aula.",
+            "Conduziu a oficina de Lagoão (RS) em outubro de 2026; a próxima turma é em Cerro Branco (RS)."
+          ]
+        },
+        {
+          "titulo": "Professora de informática",
+          "local": "E. E. Antonio Vicente da Fontoura (Seduc-RS)",
+          "periodo": "abr. – jun. 2026",
+          "versoes": [
+            "completo",
+            "docencia"
+          ],
+          "topicos": [
+            "Lecionou lógica, pensamento computacional e introdução a projetos para três turmas de 1º ano do ensino médio."
+          ]
+        },
+        {
+          "titulo": "Pesquisadora de mestrado",
+          "local": "UFSM",
+          "periodo": "abr. 2025 – atual",
+          "topicos": [
+            "Desenvolve o módulo de visão computacional de uma mochila inteligente para pessoas cegas ou com baixa visão.",
+            "Compara MobileNetV1, V2, V3 Small e V3 Large nos datasets MIT67 e NYU Depth v2, medindo acurácia e latência.",
+            "A MobileNetV1 chegou a ==70,0% no MIT67 com 3,2 ms por imagem==, a 0,7 ponto da mais precisa e com menos da metade da latência."
+          ],
+          "tags": [
+            "PyTorch",
+            "MobileNet",
+            "Visão computacional"
+          ]
+        },
+        {
+          "titulo": "Bolsista de iniciação científica em IA",
+          "local": "CNPq",
+          "periodo": "jul. 2020 – jan. 2025",
+          "topicos": [
+            "Projetos de visão computacional e processamento de linguagem natural ao longo de quatro anos e meio.",
+            "Apresentou 15 trabalhos em eventos científicos e ministrou 3 palestras em institutos federais."
+          ]
+        },
+        {
+          "titulo": "Engenheira de dados trainee",
+          "local": "Compass UOL",
+          "periodo": "dez. 2019 – jul. 2020",
+          "versoes": [
+            "completo",
+            "dados"
+          ],
+          "topicos": [
+            "Projetou arquiteturas em nuvem para soluções de inteligência artificial.",
+            "Modelou dados em SQL e apoiou a gestão de um data lake na AWS (S3 e EC2)."
+          ],
+          "tags": [
+            "SQL",
+            "AWS",
+            "Data lake"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Projetos",
+      "versoes": [
+        "completo",
+        "dados"
+      ],
+      "itens": [
+        {
+          "titulo": "Previsão de recompra de clientes em 60 dias",
+          "texto": "Modelo que indica quais clientes de um varejo online devem comprar de novo em 60 dias, com ROC AUC de 0,73. Limpeza de 541 mil transações, segmentação RFM e comparação de 5 modelos sem vazamento de dados do futuro.",
+          "tags": [
+            "pandas",
+            "scikit-learn",
+            "LightGBM",
+            "XGBoost"
+          ]
+        },
+        {
+          "titulo": "Painel de dados da educação no Vale do Rio Pardo",
+          "texto": "Painel interativo com dados do Censo Escolar (INEP) e do Censo IBGE de 21 municípios, de 2010 a 2025, com filtros por região e município.",
+          "link": "https://ohtopico.com.br/infograficos/dados-da-regiao/",
+          "tags": [
+            "Python",
+            "JavaScript",
+            "Visualização de dados"
+          ]
+        },
+        {
+          "titulo": "Gerador de currículo em JSON",
+          "texto": "Este projeto: um único arquivo JSON vira página web e PDF, com versões diferentes para cada tipo de vaga.",
+          "link": "https://github.com/ohtopico/curriculo-json",
+          "tags": [
+            "Node.js",
+            "HTML e CSS",
+            "Playwright"
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Publicações e materiais",
+      "versoes": [
+        "completo",
+        "docencia"
+      ],
+      "itens": [
+        {
+          "titulo": "IA pra Prof: guia prático de inteligência artificial para educadores",
+          "periodo": "2026",
+          "texto": "E-book sobre IA na escola: fundamentos, ética e LGPD, prompts prontos para planejamento, materiais e AEE. ISBN 978-65-02-46268-3."
+        },
+        {
+          "titulo": "Material didático gratuito",
+          "periodo": "2026",
+          "texto": "Acervo aberto alinhado à BNCC: 42 aulas de Computação do 6º ao 9º ano com planos de aula, 20 jogos e o Laboratório 3D de Matemática. DOI 10.5281/zenodo.23717721.",
+          "link": "https://ohtopico.com.br/material-didatico/"
+        }
+      ]
+    },
+    {
+      "titulo": "Formação",
+      "tipo": "lista",
+      "itens": [
+        {
+          "titulo": "Mestrado em Ciência da Computação",
+          "local": "UFSM",
+          "periodo": "previsão: 2027"
+        },
+        {
+          "titulo": "Licenciatura em Informática",
+          "local": "UNIASSELVI",
+          "periodo": "2026",
+          "versoes": [
+            "completo",
+            "docencia"
+          ]
+        },
+        {
+          "titulo": "Especialização em Robótica Educacional",
+          "local": "Líbano Educacional",
+          "periodo": "2026",
+          "versoes": [
+            "completo",
+            "docencia"
+          ]
+        },
+        {
+          "titulo": "Especialização em Ciência de Dados e Big Data Analytics",
+          "local": "UNISC",
+          "periodo": "2025",
+          "versoes": [
+            "completo",
+            "dados"
+          ]
+        },
+        {
+          "titulo": "Bacharelado em Ciência da Computação",
+          "local": "UNISC",
+          "periodo": "2024"
+        }
+      ]
+    },
+    {
+      "titulo": "Competências",
+      "tipo": "pilulas",
+      "grupos": [
+        {
+          "titulo": "Dados e engenharia",
+          "versoes": [
+            "completo",
+            "dados"
+          ],
+          "itens": [
+            "Python (pandas, NumPy, PySpark)",
+            "SQL",
+            "Modelagem de dados",
+            "Web scraping",
+            "Git e GitHub"
+          ]
+        },
+        {
+          "titulo": "Machine learning e IA",
+          "itens": [
+            "scikit-learn",
+            "TensorFlow/Keras",
+            "PyTorch",
+            "Visão computacional",
+            "Transfer learning",
+            "OpenCV"
+          ]
+        },
+        {
+          "titulo": "Educação",
+          "versoes": [
+            "completo",
+            "docencia"
+          ],
+          "itens": [
+            "BNCC Computação",
+            "Pensamento computacional",
+            "Scratch e Arduino",
+            "Robótica educacional",
+            "Formação de professores",
+            "IA na educação"
+          ]
+        },
+        {
+          "titulo": "Nuvem",
+          "versoes": [
+            "completo",
+            "dados"
+          ],
+          "itens": [
+            "AWS (S3, EC2)",
+            "Google Cloud"
+          ]
+        }
+      ]
+    }
+  ],
+  "rodape": {
+    "site": "ohtopico.com.br",
+    "link": "https://ohtopico.com.br"
+  }
+}

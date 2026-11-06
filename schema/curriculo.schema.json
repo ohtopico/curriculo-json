@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Currículo",
+  "description": "Formato do arquivo lido pelo gerador de currículo (gerar.mjs).",
+  "type": "object",
+  "required": ["pessoa"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "idioma": { "type": "string", "description": "Idioma da página, como pt-BR ou en.", "default": "pt-BR" },
+    "versoes": {
+      "type": "object",
+      "description": "Versões do currículo: a chave vai no nome do arquivo e o valor aparece no botão. A primeira vira index.html.",
+      "additionalProperties": { "type": "string" },
+      "examples": [{ "completo": "Completo", "docencia": "Docência" }]
+    },
+    "pessoa": {
+      "type": "object",
+      "required": ["nome"],
+      "properties": {
+        "nome": { "type": "string" },
+        "titulo": { "type": "string", "description": "Linha logo abaixo do nome." },
+        "subtitulo": { "type": "string" },
+        "foto": { "type": "string", "description": "Caminho da foto (relativo ao JSON) ou URL." },
+        "contatos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["texto"],
+            "properties": {
+              "rotulo": { "type": "string", "examples": ["E-mail", "GitHub", "LinkedIn"] },
+              "texto": { "type": "string" },
+              "link": { "type": "string", "description": "https:, mailto: ou tel:" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "resumo": {
+      "description": "Um texto só, ou um texto por versão (use \"padrao\" para as versões sem texto próprio). Aceita **negrito**, ==grifo== e [link](https://...).",
+      "oneOf": [
+        { "type": "string" },
+        { "type": "object", "additionalProperties": { "type": "string" } }
+      ]
+    },
+    "secoes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/secao" }
+    },
+    "rodape": {
+      "type": "object",
+      "properties": {
+        "site": { "type": "string" },
+        "link": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "versoes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Em quais versões isto aparece. Sem este campo, aparece em todas."
+    },
+    "item": {
+      "type": "object",
+      "required": ["titulo"],
+      "properties": {
+        "titulo": { "type": "string" },
+        "local": { "type": "string", "description": "Empresa, escola ou instituição." },
+        "periodo": { "type": "string", "examples": ["2024 – atual"] },
+        "texto": { "type": "string" },
+        "topicos": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "type": "string" }, "description": "Ferramentas, mostradas como pílulas." },
+        "link": { "type": "string" },
+        "versoes": { "$ref": "#/$defs/versoes" }
+      },
+      "additionalProperties": false
+    },
+    "secao": {
+      "type": "object",
+      "required": ["titulo"],
+      "properties": {
+        "titulo": { "type": "string" },
+        "tipo": {
+          "enum": ["itens", "lista", "pilulas", "texto"],
+          "default": "itens",
+          "description": "itens: blocos com tópicos; lista: uma linha por item; pilulas: grupos de pílulas; texto: um parágrafo."
+        },
+        "versoes": { "$ref": "#/$defs/versoes" },
+        "itens": { "type": "array", "items": { "$ref": "#/$defs/item" } },
+        "grupos": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["itens"],
+            "properties": {
+              "titulo": { "type": "string" },
+              "itens": { "type": "array", "items": { "type": "string" } },
+              "versoes": { "$ref": "#/$defs/versoes" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "texto": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

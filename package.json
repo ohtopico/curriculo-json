@@ -1,0 +1,19 @@
+{
+  "name": "curriculo-json",
+  "version": "1.0.0",
+  "description": "Gerador de currículo: um arquivo JSON vira página web e PDF, com versões para cada tipo de vaga.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Júlia Roberta Quoos Alves (https://ohtopico.com.br)",
+  "scripts": {
+    "gerar": "node gerar.mjs",
+    "web": "node gerar.mjs --sem-pdf",
+    "assistir": "node gerar.mjs --sem-pdf --assistir",
+    "exemplo": "node gerar.mjs exemplos/minimo.json --saida saida-exemplo",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "playwright": "^1.48.0"
+  }
+}

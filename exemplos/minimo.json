@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/curriculo.schema.json",
+  "pessoa": {
+    "nome": "Seu Nome Completo",
+    "titulo": "Sua profissão ou cargo",
+    "contatos": [
+      { "rotulo": "E-mail", "texto": "voce@exemplo.com", "link": "mailto:voce@exemplo.com" }
+    ]
+  },
+  "resumo": "Duas ou três frases sobre você. Use ==grifo== para destacar e **negrito** para ênfase.",
+  "secoes": [
+    {
+      "titulo": "Experiência",
+      "itens": [
+        {
+          "titulo": "Cargo",
+          "local": "Empresa ou escola",
+          "periodo": "2024 – atual",
+          "topicos": ["O que você fez e qual foi o resultado."]
+        }
+      ]
+    },
+    {
+      "titulo": "Formação",
+      "tipo": "lista",
+      "itens": [{ "titulo": "Curso", "local": "Instituição", "periodo": "2023" }]
+    }
+  ]
+}
